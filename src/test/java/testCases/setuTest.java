@@ -22,12 +22,14 @@ public class setuTest extends BaseTest{
 	
 	
 	@Test(priority=2)
-	void testCaseOne() throws AWTException{
+	void testCaseOne() throws AWTException, InterruptedException{
 		HomePagePageObject home = new HomePagePageObject(driver);
 		home.clickOnCreateButton().enterSummary(PropertyUtils.getProperty("summary"));
 		home.clickOnBrowseFile();
 		home.uploadFile(System.getProperty("user.dir")+"/Skype.dmg");
+		home.selectUser("rohith chevvakula");
 		home.createJiraTicket();
+		
 	}
 
 

@@ -45,6 +45,9 @@ public class HomePagePageObject  extends BasePageObject{
 	@FindBy(xpath="//div[contains(text(),'Upload in progress, please wait.')]")
 	WebElement uploading;
 	
+	@FindBy(id="assignee-field")
+	WebElement assignee;
+	
 	public HomePagePageObject clickOnCreateButton(){
 		waitUtil.waitForElementToAppear(createButton, driver).click();
 		return this;
@@ -68,6 +71,17 @@ public class HomePagePageObject  extends BasePageObject{
 	}
 	
 	
+	public HomePagePageObject selectUser(String userName) throws InterruptedException{
+		waitUtil.waitForElementToAppear(assignee, driver).click();
+		waitUtil.waitForElementToAppear(assignee, driver).sendKeys(userName);
+		waitUtil.staticWait(2000);
+		String name = driver.findElement(By.xpath("//*[@id='assignee-suggestions']/div/ul/li/a/em")).getText();
+		System.out.println(name.toLowerCase());
+		if(name.toLowerCase().equals(userName.toLowerCase())){
+			driver.findElement(By.xpath("//*[@id='assignee-suggestions']/div/ul/li/a/em")).click();
+		}
+		return this;
+	}
 	
 	
 	public HomePagePageObject uploadFile(String path) throws AWTException {
