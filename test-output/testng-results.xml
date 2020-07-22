@@ -2,54 +2,54 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45202" started-at="2020-07-22T16:07:08Z" finished-at="2020-07-22T16:07:53Z">
+  <suite name="Default suite" duration-ms="38159" started-at="2020-07-22T16:16:49Z" finished-at="2020-07-22T16:17:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45202" started-at="2020-07-22T16:07:08Z" finished-at="2020-07-22T16:07:53Z">
+    <test name="Default test" duration-ms="38159" started-at="2020-07-22T16:16:49Z" finished-at="2020-07-22T16:17:27Z">
       <class name="testCases.setuTest">
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:testCases.setuTest@9353778]" name="setUpPage" is-config="true" duration-ms="13" started-at="2020-07-22T16:07:08Z" finished-at="2020-07-22T16:07:08Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:testCases.setuTest@27efef64]" name="setUpPage" is-config="true" duration-ms="10" started-at="2020-07-22T16:16:49Z" finished-at="2020-07-22T16:16:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:testCases.setuTest@9353778]" name="setUpAppium" is-config="true" duration-ms="2160" started-at="2020-07-22T16:07:08Z" finished-at="2020-07-22T16:07:10Z">
+        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:testCases.setuTest@27efef64]" name="setUpAppium" is-config="true" duration-ms="2826" started-at="2020-07-22T16:16:49Z" finished-at="2020-07-22T16:16:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpAppium -->
-        <test-method status="PASS" signature="login()[pri:1, instance:testCases.setuTest@9353778]" name="login" duration-ms="5349" started-at="2020-07-22T16:07:10Z" finished-at="2020-07-22T16:07:16Z">
+        <test-method status="PASS" signature="login()[pri:1, instance:testCases.setuTest@27efef64]" name="login" duration-ms="6344" started-at="2020-07-22T16:16:52Z" finished-at="2020-07-22T16:16:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.setuTest@9353778]" name="afterMethod" is-config="true" duration-ms="3" started-at="2020-07-22T16:07:16Z" finished-at="2020-07-22T16:07:16Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.setuTest@27efef64]" name="afterMethod" is-config="true" duration-ms="8" started-at="2020-07-22T16:16:59Z" finished-at="2020-07-22T16:16:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=setuTest.login()[pri:1, instance:testCases.setuTest@9353778] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=setuTest.login()[pri:1, instance:testCases.setuTest@27efef64] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testCaseOne()[pri:2, instance:testCases.setuTest@9353778]" name="testCaseOne" duration-ms="36369" started-at="2020-07-22T16:07:16Z" finished-at="2020-07-22T16:07:53Z">
+        <test-method status="PASS" signature="testCaseOne()[pri:2, instance:testCases.setuTest@27efef64]" name="testCaseOne" duration-ms="27637" started-at="2020-07-22T16:16:59Z" finished-at="2020-07-22T16:17:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCaseOne -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.setuTest@9353778]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-07-22T16:07:53Z" finished-at="2020-07-22T16:07:53Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testCases.setuTest@27efef64]" name="afterClass" is-config="true" duration-ms="1" started-at="2020-07-22T16:17:27Z" finished-at="2020-07-22T16:17:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.setuTest@27efef64]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-07-22T16:17:27Z" finished-at="2020-07-22T16:17:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testCaseOne status=SUCCESS method=setuTest.testCaseOne()[pri:2, instance:testCases.setuTest@9353778] output={null}]]]>
+                <![CDATA[[TestResult name=testCaseOne status=SUCCESS method=setuTest.testCaseOne()[pri:2, instance:testCases.setuTest@27efef64] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testCases.setuTest@9353778]" name="afterClass" is-config="true" duration-ms="0" started-at="2020-07-22T16:07:53Z" finished-at="2020-07-22T16:07:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.setuTest@9353778]" name="tearDown" is-config="true" duration-ms="250" started-at="2020-07-22T16:07:53Z" finished-at="2020-07-22T16:07:54Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.setuTest@27efef64]" name="tearDown" is-config="true" duration-ms="227" started-at="2020-07-22T16:17:27Z" finished-at="2020-07-22T16:17:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

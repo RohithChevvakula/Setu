@@ -27,7 +27,7 @@ public class setuTest extends BaseTest{
 		home.clickOnCreateButton().enterSummary(PropertyUtils.getProperty("summary"));
 		home.clickOnBrowseFile();
 		home.uploadFile(System.getProperty("user.dir")+"/Skype.dmg");
-		home.selectUser("rohith chevvakula");
+		home.selectUser(PropertyUtils.getProperty("assignee"));
 		home.createJiraTicket();
 		
 	}
