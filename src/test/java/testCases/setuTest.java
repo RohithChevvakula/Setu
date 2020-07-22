@@ -26,7 +26,8 @@ public class setuTest extends BaseTest{
 		HomePagePageObject home = new HomePagePageObject(driver);
 		home.clickOnCreateButton().enterSummary(PropertyUtils.getProperty("summary"));
 		home.clickOnBrowseFile();
-		home.uploadFile(System.getProperty("user.dir")+"/rohith.jpg");
+		home.uploadFile(System.getProperty("user.dir")+"/Skype.dmg");
+		home.createJiraTicket();
 	}
 
 

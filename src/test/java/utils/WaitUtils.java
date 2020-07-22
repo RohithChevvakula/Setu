@@ -22,10 +22,19 @@ public class WaitUtils {
     	return wait.until(ExpectedConditions.visibilityOf(element));
     }
     
+    public boolean waitForElementToDisappear(WebElement element, WebDriver driver){
+    	wait = new WebDriverWait(driver, explicitWaitDefault);
+    	return wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+    
     public WebElement waitForElementToAppearAndEnable(WebElement element, WebDriver driver){
     	wait = new WebDriverWait(driver, explicitWaitDefault);
     	wait.until(ExpectedConditions.elementToBeClickable(element));
     	return element;
+    }
+    
+    public boolean isPresent(WebElement element){
+    	return element.isDisplayed();
     }
 
 }

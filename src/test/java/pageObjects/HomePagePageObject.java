@@ -20,30 +20,8 @@ public class HomePagePageObject  extends BasePageObject{
 	public HomePagePageObject(WebDriver driver) {
 		super(driver);
 	}
-	
-	@FindBy(id="createGlobalItem")
-	WebElement createButton;
-	
-	public HomePagePageObject clickOnCreateButton(){
-		waitUtil.waitForElementToAppear(createButton, driver).click();
-		return this;
-	}
-	
-	@FindBy(id="summary")
-	WebElement summary;
-	
-	public HomePagePageObject enterSummary(String keysToSend){
-		waitUtil.waitForElementToAppear(summary, driver).sendKeys(keysToSend);
-		return this;
-	}
-	
-	@FindBy(xpath="//button[@class='issue-drop-zone__button']")
-	WebElement browse;
-	
-	public HomePagePageObject clickOnBrowseFile(){
-		waitUtil.waitForElementToAppear(browse, driver).click();
-		return this;
-	}
+	@FindBy(id="create-issue-submit")
+	WebElement create;
 	
 	@FindBy(xpath="//*[@id='demo-dialog']/div/iframe")
 	WebElement iFrame;
@@ -54,7 +32,49 @@ public class HomePagePageObject  extends BasePageObject{
 	@FindBy(xpath="//span[contains(text(),'Insert')]/parent::span/parent::button")
 	WebElement insert;
 	
+	@FindBy(id="createGlobalItem")
+	WebElement createButton;
+	
+
+	@FindBy(id="summary")
+	WebElement summary;
+	
+	@FindBy(xpath="//button[@class='issue-drop-zone__button']")
+	WebElement browse;
+	
+	@FindBy(xpath="//div[contains(text(),'Upload in progress, please wait.')]")
+	WebElement uploading;
+	
+	public HomePagePageObject clickOnCreateButton(){
+		waitUtil.waitForElementToAppear(createButton, driver).click();
+		return this;
+	}
+	
+	
+	public HomePagePageObject enterSummary(String keysToSend){
+		waitUtil.waitForElementToAppear(summary, driver).sendKeys(keysToSend);
+		return this;
+	}
+	
+	public HomePagePageObject createJiraTicket(){
+		do{
+			waitUtil.waitForElementToAppear(create, driver).click();
+			System.out.println("still uploading");
+		}while(waitUtil.isPresent(uploading));
+			
+		return this;
+	}
+	
+	public HomePagePageObject clickOnBrowseFile(){
+		waitUtil.waitForElementToAppear(browse, driver).click();
+		return this;
+	}
+	
+	
+	
+	
 	public HomePagePageObject uploadFile(String path) throws AWTException {
+		waitUtil.waitForElementToAppear(iFrame, driver);
 		driver.switchTo().frame(iFrame);
 		waitUtil.waitForElementToAppear(upload, driver).click();
 		StringSelection stringSelection = new StringSelection(path);
