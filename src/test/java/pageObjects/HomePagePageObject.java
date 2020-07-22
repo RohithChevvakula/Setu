@@ -57,11 +57,8 @@ public class HomePagePageObject  extends BasePageObject{
 	}
 	
 	public HomePagePageObject createJiraTicket(){
-		do{
-			waitUtil.waitForElementToAppear(create, driver).click();
-			System.out.println("still uploading");
-		}while(waitUtil.isPresent(uploading));
-			
+		waitUtil.wait("//span[@class='upload-progress-bar__bar' and @style='width: 100%;']",driver);
+		waitUtil.waitForElementToAppear(create, driver).click();
 		return this;
 	}
 	

@@ -2,6 +2,8 @@ package utils;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +17,12 @@ public class WaitUtils {
             TimeUnit.MILLISECONDS.sleep(millis);
         } catch (final InterruptedException e) {
         }
+    }
+    
+    
+    public WebElement wait(String xpath, WebDriver driver){
+    	wait = new WebDriverWait(driver, explicitWaitDefault);
+    	return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
     }
     
     public WebElement waitForElementToAppear(WebElement element, WebDriver driver){
@@ -34,6 +42,12 @@ public class WaitUtils {
     }
     
     public boolean isPresent(WebElement element){
+    	
+    	try {
+    		boolean f = element.isDisplayed();}
+    	catch(NoSuchElementException e){
+    		System.out.println("Element is not on the screen.");
+    	}
     	return element.isDisplayed();
     }
 
